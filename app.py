@@ -1,13 +1,5 @@
 
-Ora creiamo il terzo file: app.py. Questo sarà il primo punto in cui vedremo concretamente il nostro software funzionare.
-STEP 3 — Crea app.py
-Su GitHub:
-Add file
-Create new file
-Nome: app.py
-Incolla tutto questo codice:
-import streamlit as st
-from api_client import get_leagues, get_teams, get_fixtures, get_standings
+
 
 
 st.set_page_config(
