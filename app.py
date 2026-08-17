@@ -1,5 +1,8 @@
+
 import streamlit as st
- st.button("Carica campionati "): try:
+
+if st.button("Carica campionati"):
+    try:
         response = get_leagues()
 
         rows = []
