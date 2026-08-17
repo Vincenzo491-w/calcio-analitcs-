@@ -1,4 +1,4 @@
-if st.button("Carica campionati"):
+import streamlit as st st.button("Carica campionati"):
     try:
         response = get_leagues()
 
