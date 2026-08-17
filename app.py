@@ -1,5 +1,9 @@
 
 
+import os
+import streamlit as st
+
+from api_client import get_leagues
 
 
 st.set_page_config(
@@ -29,9 +33,6 @@ if "API_FOOTBALL_KEY" not in st.secrets:
     )
     st.stop()
 
-
-# Collegamento temporaneo della chiave ai moduli Python
-import os
 
 os.environ["API_FOOTBALL_KEY"] = st.secrets["API_FOOTBALL_KEY"]
 
@@ -75,13 +76,3 @@ if st.button("Carica campionati"):
             )
 
     except Exception as e:
-
-        st.error(f"Errore API: {e}")
-Poi:
-Commit changes
-⚠️ Una cosa importante
-Per adesso non dobbiamo ancora testare l'app.
-Prima dobbiamo configurare correttamente la tua API key nei Secrets di Streamlit, così non finisce pubblicamente su GitHub.
-Quando hai creato e salvato app.py, scrivimi semplicemente:
-Fatto
-e passiamo alla configurazione sicura della API key.
