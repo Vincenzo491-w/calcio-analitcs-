@@ -1,4 +1,4 @@
-Perfetto. ✅ Siamo sulla strada giusta.
+
 Ora creiamo il terzo file: app.py. Questo sarà il primo punto in cui vedremo concretamente il nostro software funzionare.
 STEP 3 — Crea app.py
 Su GitHub:
