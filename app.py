@@ -1,5 +1,5 @@
-import streamlit as st st.button("Carica campionati"):
-    try:
+import streamlit as st
+ st.button("Carica campionati "): try:
         response = get_leagues()
 
         rows = []
