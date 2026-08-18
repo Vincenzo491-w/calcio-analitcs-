@@ -92,10 +92,17 @@ def get_leagues():
 
     response.raise_for_status()
 
-    data = response.json()
+    
+data = response.json()
 
-    return data.get("response", [])
+if data.get("errors"):
+    st.error(f"Errore API-Football: {data['errors']}")
 
+if data.get("results", 0) == 0:
+    st.warning("API-Football ha restituito 0 risultati.")
+    st.write("Risposta API:", data)
+
+return data.get("response", [])
 
 # ============================================================
 # SEZIONE CAMPIONATI
