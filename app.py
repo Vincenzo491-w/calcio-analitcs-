@@ -76,7 +76,31 @@ HEADERS = {
 # ============================================================
 # FUNZIONE: CARICA CAMPIONATI
 # ============================================================
+def get_leagues():
+    """
+    Recupera i campionati disponibili da API-Football.
+    """
 
+    url = f"{BASE_URL}/leagues"
+
+    response = requests.get(
+        url,
+        headers=HEADERS,
+        timeout=20
+    )
+
+    response.raise_for_status()
+
+    data = response.json()
+
+    if data.get("errors"):
+        st.error(f"Errore API-Football: {data['errors']}")
+
+    if data.get("results", 0) == 0:
+        st.warning("API-Football ha restituito 0 risultati.")
+        st.write("Risposta API:", data)
+
+    return data.get("response", [])
 def get_leagues():
     """
     Recupera i campionati disponibili da API-Football.
